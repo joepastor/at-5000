@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: iso-8859-15 -*-
+# Joe - jlopez.mail@gmail.com
+
 from conexion import *
 from time import strftime,localtime
 import os
