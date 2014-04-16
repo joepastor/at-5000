@@ -84,7 +84,7 @@ while True:
 
 	html="<meta http-equiv=refresh content=1><body topmargin=0 leftmargin=0 rightmargin=0 bottommargin=0><table border=0 width=100% cellpadding=0 cellspacing=1><tr align=center><td>Actualizacion</td><td>Extension</td><td>Agentes</td><td>Libres</td><td>Hablando</td><td>Exigencia</td><td>Discando</td><td>Llamadas Realizadas</td><td>Base Disponible</td></tr>"
 
-	logfile=open("%s/at5000-%s.log" % (dirapp,strftime("%Y%m%d")),"a")
+	logfile=open("%s/logs/at5000-%s.log" % (dirapp,strftime("%Y%m%d")),"a")
 
 	session.execute("""select extension,count(*) as base from at5000 where llamar<=date_FORMAT(now(),"%Y%m%d") and llamado=0 group by 1""")
 	rstcolas=session.fetchall()
